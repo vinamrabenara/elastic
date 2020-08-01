@@ -77,7 +77,11 @@ model_names = sorted(
 )
 
 parser = argparse.ArgumentParser(description="PyTorch Elastic ImageNet Training")
-parser.add_argument("data", metavar="DIR", help="path to dataset")
+parser.add_argument(
+    "--data",
+    metavar="DIR",
+    help="path to dataset",
+)
 parser.add_argument(
     "-a",
     "--arch",
@@ -95,7 +99,11 @@ parser.add_argument(
     help="number of data loading workers",
 )
 parser.add_argument(
-    "--epochs", default=90, type=int, metavar="N", help="number of total epochs to run"
+    "--epochs",
+    default=90,
+    type=int,
+    metavar="N",
+    help="number of total epochs to run"
 )
 parser.add_argument(
     "-b",
@@ -114,7 +122,13 @@ parser.add_argument(
     help="initial learning rate",
     dest="lr",
 )
-parser.add_argument("--momentum", default=0.9, type=float, metavar="M", help="momentum")
+parser.add_argument(
+    "--momentum",
+    default=0.9,
+    type=float,
+    metavar="M",
+    help="momentum",
+)
 parser.add_argument(
     "--wd",
     "--weight-decay",
